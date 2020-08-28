@@ -1,0 +1,44 @@
+/* apply styles to <body> */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.body-grid-wrapper {
+    display: grid;
+    width: 100%;
+  }
+  
+.body-grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+   /* color:  #227070;*/
+    font-size: 1.2rem;
+  }
+
+/* apply styles to <header> */
+header {
+    padding: 20px 35px;
+    background-color: #333333;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+}
+
+header h1 {
+    text-shadow: 0 0 10px #f7dcdc;
+}
+
+header p {
+    text-decoration: none;
+    color: #cacaca;
+}
