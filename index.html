@@ -10,7 +10,7 @@
     </head>
     <body class="wrapper">      
             <header class="hero">
-              <h1 class="app-title"><i class="fab fa-github"></i>Weather Dashboard!</h1>
+              <h1 class="app-title"> Weather Dashboard!</h1>
               <p>Search for a City to see the weather forcast.
               </p>
             </header>
@@ -20,27 +20,51 @@
             <div class="body-grid-container">
                 <div class="box1">
                     <div class="card">
-                        <h4 class="card-header">Search for City</h4>
+                        <h4 class="card-header">Search for City:</h4>
                         <form id="city-form" class="card-body">
                             <label class="form-lable" for="cityname"></label>
                             <input name="cityname" id="cityname" text="text" autofocus="true" class="form-input" />
-                            <button type="submit" class="btn"><i class="fas fa-search"></i></button>
+                            <button type="submit" class="btn" id="save-history"><i class="fas fa-search"></i></button>
                         </form>
                         <div class="card">
-                            <h4 class="card-header">Search History</h4>
-                              <div class="card-body" id="language-buttons">
-                                <button class="btn">srarch</button>
+                            <h4 class="card-header"></h4>
+                              <div class="card-body" id="history-search">
+                                <ul>
+                                    
+                                </ul>
                               </div>
                           </div>
                     </div>
                 </div>
-                <div class="box2">
-                    <h4 class="subtitle"> Today's weather in <span id="city-search-term"></span></h4>
-                    <div id="city-container" class="list-group"></div>
+                <div class="box2" id="today">
+                    <div class ="card">
+                        <h4 class="subtitle"><span id="city-search-term"></span></h4>
+                        <div id="city-container" class="list-group">
+                            <div class="row">
+                                <div id="today-temp"></div>
+                                <div id="today-info"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="box3">
-                    <h4 class="subtitle">Five day forcast <span id="search-term"></span></h4>
-                    <div id="forecast-container" class="list-group"></div>
+                    <div class ="card">
+                        <h4 class="subtitle">Five day forcast <span id="search-term"></span></h4>
+                        <div class="forcast-wrapper">
+                            <div class="forcast-grid-container">
+                                <div class="forcastBox">
+                                </div>
+                                <div class="forcastBox">
+                                </div>
+                                <div class="forcastBox">
+                                </div>
+                                <div class="forcastBox">
+                                </div>
+                                <div class="forcastBox">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div> 
             
