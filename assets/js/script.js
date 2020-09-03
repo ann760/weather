@@ -1,8 +1,9 @@
+// create variables and select the div where the responce will be displayed
 var cityFormE1 = document.querySelector("#city-form");
 var cityInputE1 = document.querySelector("#cityname");
 var cityContainerEl = document.querySelector("#city-container");
 var citySearchTerm = document.querySelector("#city-search-term");
-//var historySearchTerm = document.querySelector("#history-search-term");
+var tempContainer = document.querySelector("#today-temp");
 var historySearch = document.querySelector("#history-search")
 var forecastContainerE1 = document.querySelector("#forecast-container");
 
@@ -18,9 +19,8 @@ var getCityWeather = function(cityname) {
         if (response.ok) {
             return response.json()
 
-            .then(function(response) {
-                // create a variable the will select the div where the temp will be placed
-                var tempContainer = document.querySelector("#today-temp");
+
+            .then(function(response) { 
                 // Empty out the div
                 tempContainer.innerHTML = "";
 
@@ -38,23 +38,17 @@ var getCityWeather = function(cityname) {
                 tempContainer.appendChild(humidity);
                 tempContainer.appendChild(wind);
                
-            })
-            .then(function(response) {
-                var infoContainer = document.querySelector('#today-info');
-                // empty out the div
-                infoContainer.innerHTML = "";
-                var tempInfo = document.createElement('p');
-                //console.log(tempInfo.textContent = response.main);
-                infoContainer.appendChild(tempInfo);
             });
            
         } else {
-           // cityContainerEl.textContent = "";
+            // empty out the div
+            cityContainerEl.innerHTML = "";
             cityContainerEl.textContent = "No city found.";
         };
     })
     .catch(function(error) {
-        // Notice this `.catch()` getting chained onto the end of the `.then()` method
+        // This `.catch()` ie chained onto the end of the `.then()` method
+        cityContainerEl.innerHTML = "";
         cityContainerEl.textContent = "Unable to connect to api";
     });
 
@@ -70,9 +64,9 @@ var getCityWeather = function(cityname) {
     
 };
 
-
 var formSubmitHandler = function(event) {
     event.preventDefault()
+    
     // get input element value
     var cityname = cityInputE1.value.trim();
     if (cityname) {
@@ -80,7 +74,7 @@ var formSubmitHandler = function(event) {
         cityInputE1.value = "";
     } else {
         cityContainerEl.textContent = "Please enter a city";
-    }
+    } 
 };
 
 cityFormE1.addEventListener("submit", formSubmitHandler);
