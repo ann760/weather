@@ -74,7 +74,7 @@ header p {
 
 
 .forcast-wrapper {
-    display: grid;
+    display: flex;
     background-color: #0e93ff;
 }
 

@@ -23,7 +23,7 @@
                         <h4 class="card-header">Search for City:</h4>
                         <form id="city-form" class="card-body">
                             <label class="form-lable" for="cityname"></label>
-                            <input name="cityname" id="cityname" text="text" autofocus="true" class="form-input" />
+                            <input name="cityname" id="cityname" tpye="text" autofocus="true" class="form-input" />
                             <button type="submit" class="btn" id="save-history"><i class="fas fa-search"></i></button>
                         </form>
                         <div class="card">
@@ -50,17 +50,10 @@
                 <div class="box3">
                     <div class ="card">
                         <h4 class="subtitle">Five day forcast <span id="search-term"></span></h4>
-                        <div class="forcast-wrapper">
-                            <div class="forcast-grid-container">
-                                <div class="forcastBox1">
-                                </div>
-                                <div class="forcastBox2">
-                                </div>
-                                <div class="forcastBox3">
-                                </div>
-                                <div class="forcastBox4">
-                                </div>
-                                <div class="forcastBox5">
+                        <div class="forecast-wrapper">
+                            <div class="forecast-grid-container" id="forecast-container">
+                                <div class= "card" id="forecastBox1">
+                                    
                                 </div>
                             </div>
                         </div>
@@ -72,5 +65,6 @@
         </main>
 
         <script src="./assets/js/script.js"></script>
+
     </body>
 </html>
